@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## .env 
+HF_APIKEY=""
+
+<img width="820" alt="Screen Shot 2023-12-19 at 8 32 16 AM" src="https://github.com/dclsamples/aidentifier/assets/1455542/50da6d5b-966f-4d2a-bce3-11758ed92763">
+
 ## Getting Started
 
 First, run the development server:
