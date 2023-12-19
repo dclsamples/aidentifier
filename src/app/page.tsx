@@ -73,7 +73,7 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen bg-gray-900 flex-col items-center justify-between px-24 py-12">
 			<h1 className=" text-5xl mb-4">AI-dentifier</h1>
-			<div className="mb-4">
+			<div className="mb-4 text-center">
 				This is a project that uses Facebook's DEtection TRansformer (DETR) model trained end-to-end on COCO
 				2017 panoptic (118k annotated images).
 			</div>
@@ -81,7 +81,7 @@ export default function Home() {
 			{/* Accept image upload input */}
 			<input
 				type="file"
-				className="border p-2 rounded-sm border-gray-600"
+				className="border p-2 mb-4 rounded-md border-gray-600"
 				onChange={handleFileChange}
 				accept="image/*"
 			/>
@@ -102,10 +102,10 @@ export default function Home() {
 			{/* Make the API call to identify objects */}
 			{theFile && (
 				<button
-					className="bg-blue-600 px-5 py-1 rounded-sm disabled:cursor-not-allowed disabled:bg-blue-900 transition-colors"
+					className="bg-blue-500 px-5 py-1 rounded-md disabled:cursor-not-allowed disabled:bg-blue-900 transition-colors"
 					onClick={identifyThings}
 					disabled={isLoading}>
-					{isLoading ? "loading..." : "Go!"}
+					{isLoading ? "loading..." : "Find objects!"}
 				</button>
 			)}
 
@@ -117,7 +117,7 @@ export default function Home() {
 						{apiResponse.map((e) => (
 							<div className="mx-2" key={e.label}>
 								<button
-									className="px-4 py-1 bg-blue-600 rounded-md"
+									className="px-4 py-1 bg-green-600 rounded-md"
 									onClick={() => toggleThis(e.label)}>
 									{e.label}
 								</button>
